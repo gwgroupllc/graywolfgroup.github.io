@@ -13,15 +13,16 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       min-height: 100vh;
       text-align: center;
+      padding-bottom: 4rem;
     }
 
     img {
       width: 300px;
       max-width: 90vw;
-      margin-bottom: 2rem;
+      margin: 2rem 0;
       border-radius: 12px;
       box-shadow: 0 0 25px #9900ff;
     }
@@ -48,15 +49,28 @@
       text-decoration: none;
       font-weight: bold;
       transition: 0.2s ease;
+      margin: 0.5rem;
     }
 
     a.button:hover {
       background: #b84dff;
     }
 
+    section {
+      margin: 2rem 0;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    h2 {
+      color: #9900ff;
+      margin-bottom: 1rem;
+    }
+
     footer {
-      position: absolute;
-      bottom: 20px;
+      position: relative;
+      bottom: 0;
+      margin-top: 2rem;
       font-size: 0.85rem;
       color: #555;
     }
@@ -67,12 +81,29 @@
   <img src="wolf_logo.jpeg" alt="Wolf Logo">
 
   <h1>GRAY WOLF GROUP</h1>
-  <p>Independent Coder • Cyber Investigator • Cyber Forensics  
-     <br>Free Lance Contracts  • Novelist and Creative Writing 
-     <br>Perceptive Pathfinder Progressive • Basic networking  
+  <p>Independent Coder • Cyber Investigator • Cyber Forensics
+     <br>Freelance Contracts • Novelist and Creative Writing
+     <br><strong>Perceptive • Pathfinder • Progression</strong>
   </p>
 
-  <a class="button" href="Corey_Paris.pdf" download>Download Resume</a>
+  <a class="button" href="Corey_Paris.pdf" download>📄 Download Resume</a>
+
+  <section id="projects">
+    <h2>🐺 Demo Projects</h2>
+    <a class="button" href="affirmation.zip" download>Download Affirmation</a>
+    <a class="button" href="guardian.zip" download>Download Guardian</a>
+    <a class="button" href="ring_wolf.zip" download>Download Ring Wolf</a>
+    <a class="button" href="the_brain.zip" download>Download The Brain</a>
+    <a class="button" href="unwind.zip" download>Download Unwind</a>
+  </section>
+
+  <section id="support">
+    <h2>🐺 Support the Pack</h2>
+    <p>If these projects help you, consider supporting Gray Wolf Group:</p>
+    <a class="button" href="https://cash.app/$GrayWolfGroup" target="_blank">💵 CashApp</a>
+    <a class="button" href="https://paypal.me/graywolfgroup" target="_blank">🅿️ PayPal</a>
+    <a class="button" href="#" onclick="navigator.clipboard.writeText('bc1q0ffv4example9d8yx3'); alert('Bitcoin address copied!')">₿ Bitcoin</a>
+  </section>
 
   <footer>
     &copy; 2025 Gray Wolf Group LLC. All rights reserved.
@@ -80,5 +111,3 @@
 
 </body>
 </html>
-
-

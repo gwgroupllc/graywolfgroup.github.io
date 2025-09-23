@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,177 +10,154 @@
       background-color: #0d0d0d;
       color: #f0f0f0;
       font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      text-align: center;
-      padding-bottom: 4rem;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
-
-    img {
-      width: 300px;
-      max-width: 90vw;
-      margin: 2rem 0;
+    /* Fade-in animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(153,0,255,0.5); }
+      50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(184,77,255,0.9); }
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    header img {
+      width: 220px;
       border-radius: 12px;
       box-shadow: 0 0 25px #9900ff;
+      animation: fadeIn 1.5s ease forwards;
     }
-
-    h1 {
+    header h1 {
       font-size: 2.5rem;
-      margin: 0.5rem 0;
       color: #9900ff;
+      margin-top: 1rem;
     }
-
-    p {
-      max-width: 600px;
-      margin: 1rem auto 2rem;
-      font-size: 1.1rem;
+    header p {
       color: #cccccc;
     }
-
     a.button {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 10px 18px;
       background: #9900ff;
       color: #fff;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.2s ease;
-      margin: 0.5rem;
+      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+      margin: 0.3rem;
     }
-
     a.button:hover {
       background: #b84dff;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(184,77,255,0.9);
     }
-
     section {
-      margin: 2rem 0;
-      width: 100%;
-      max-width: 800px;
+      max-width: 850px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      animation: fadeIn 1.5s ease forwards;
     }
-
     h2 {
       color: #9900ff;
       margin-bottom: 1rem;
+      text-align: center;
     }
-
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #1a0026;
+      border: 1px solid #9900ff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(153,0,255,0.5);
+      text-align: left;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      animation: fadeIn 2s ease forwards;
+    }
+    li:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(184,77,255,0.9);
+    }
+    li a {
+      color: #d18dff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    li a:hover {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+    #support .button {
+      animation: pulse 3s infinite;
+    }
     footer {
-      position: relative;
-      bottom: 0;
-      margin-top: 2rem;
+      text-align: center;
+      padding: 1rem;
       font-size: 0.85rem;
-      color: #555;
+      color: #aaa;
+      border-top: 1px solid #333;
+      box-shadow: 0 -2px 10px rgba(153,0,255,0.3);
     }
   </style>
 </head>
 <body>
 
+<header>
   <img src="wolf_logo.jpeg" alt="Wolf Logo">
-
   <h1>GRAY WOLF GROUP</h1>
   <p>Independent Coder • Cyber Investigator • Cyber Forensics
      <br>Freelance Contracts • Novelist and Creative Writing
-     <br><strong>Perceptive • Pathfinder • Progression</strong>
-  </p>
-
+     <br><strong>Perceptive • Pathfinder • Progression</strong></p>
   <a class="button" href="Corey_Paris.pdf" download>📄 Download Resume</a>
+</header>
 
-  <section id="projects">
-    <h2>🐺 Demo Projects</h2>
-    <a class="button" href="affirmation.zip" download>Download Affirmation</a>
-    <a class="button" href="guardian.zip" download>Download Guardian</a>
-    <a class="button" href="ring_wolf.zip" download>Download Ring Wolf</a>
-    <a class="button" href="the_brain.zip" download>Download The Brain</a>
-    <a class="button" href="unwind.zip" download>Download Unwind</a>
-  </section>
+<section id="demos">
+  <h2>🐺 Demo Projects</h2>
+  <ul>
+    <li>
+      <a href="affirmation.zip" download>🖤 Affirmation Engine</a><br>
+      Tkinter-based affirmations by mood & struggle. JSON-powered GUI for the people.
+    </li>
+    <li>
+      <a href="the_brain.zip" download>🧠 The Brain</a><br>
+      CLI tutor with 12 subjects: Math, English, GED prep, Econ, Hidden History, and more.
+    </li>
+    <li>
+      <a href="unwind.zip" download>🎓 Overload → Unwind</a><br>
+      Second-chance curriculum engine. Teaches, reflects, then calms with relaxation exercises.
+    </li>
+    <li>
+      <a href="guardian.zip" download>🛡️ Guardian Lite</a><br>
+      Cyber defense starter shield. Scans files, monitors processes, and checks network safety.
+    </li>
+    <li>
+      <a href="ring_wolf.zip" download>🥊 Ring Wolf</a><br>
+      Silent Army boxing demo. Turn-based fight system with stamina, rounds, and expansion hooks.
+    </li>
+  </ul>
+</section>
 
-  <section id="support">
-    <h2>🐺 Support the Pack</h2>
-    <p>If these projects help you, consider supporting Gray Wolf Group:</p>
-    <a class="button" href="https://cash.app/$GrayWolfGroup" target="_blank">💵 CashApp</a>
-    <a class="button" href="https://paypal.me/graywolfgroup" target="_blank">🅿️ PayPal</a>
-    <a class="button" href="#" onclick="navigator.clipboard.writeText('bc1q0ffv4example9d8yx3'); alert('Bitcoin address copied!')">₿ Bitcoin</a>
-  </section>
+<section id="support">
+  <h2>🐺 Support the Pack</h2>
+  <p>If these projects help you, consider supporting Gray Wolf Group:</p>
+  <a class="button" href="https://cash.app/$GrayWolfGroup" target="_blank">💵 CashApp</a>
+  <a class="button" href="https://paypal.me/graywolfgroup" target="_blank">🅿️ PayPal</a>
+  <a class="button" href="#" onclick="navigator.clipboard.writeText('bc1q0ffv4example9d8yx3'); alert('Bitcoin address copied!')">₿ Bitcoin</a>
+</section>
 
-  <footer>
-    &copy; 2025 Gray Wolf Group LLC. All rights reserved.
-  </footer>
+<footer>
+  &copy; 2025 Gray Wolf Group LLC. All rights reserved.
+</footer>
 
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gray Wolf Group Portfolio</title>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #111; color: #f0f0f0; margin: 0; padding: 0; }
-    header { text-align: center; padding: 2rem; background-color: #1a1a1a; }
-    header img { width: 150px; border-radius: 50%; }
-    header h1 { margin: 1rem 0 0.5rem; font-size: 2rem; color: #eee; }
-    header a { color: #ff4444; text-decoration: none; font-weight: bold; }
-    section { padding: 2rem; max-width: 800px; margin: auto; }
-    h2 { color: #ff4444; border-bottom: 2px solid #ff4444; padding-bottom: 0.5rem; }
-    ul { list-style: none; padding: 0; }
-    li { background: #222; margin: 1rem 0; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
-    li a { color: #ffcc00; font-weight: bold; text-decoration: none; }
-    li a:hover { text-decoration: underline; }
-    footer { text-align: center; padding: 1rem; background-color: #1a1a1a; color: #888; }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="wolf_logo.jpeg" alt="Wolf Logo">
-    <h1>Gray Wolf Group Portfolio</h1>
-    <p><a href="resume.pdf" target="_blank">📄 View Resume</a></p>
-  </header>
-
-  <section id="demos">
-    <h2>🐺 Demo Projects</h2>
-    <p>Silent Army tools & demos — free to explore, built to grow.</p>
-    <ul>
-      <li>
-        <a href="../demos/affirmation_engine/README.md" target="_blank">🖤 Real Life Affirmation Engine</a><br>
-        Tkinter-based affirmations by mood & struggle. JSON-powered GUI for the people.
-      </li>
-      <li>
-        <a href="../demos/the_brain/README.md" target="_blank">🧠 The Brain</a><br>
-        CLI tutor with 12 subjects: Math, English, GED prep, Econ, Hidden History, and more.
-      </li>
-      <li>
-        <a href="../demos/overload_unwind/README.md" target="_blank">🎓 Overload → Unwind</a><br>
-        Second-chance curriculum engine. Teaches, reflects, then calms with relaxation exercises.
-      </li>
-      <li>
-        <a href="../demos/guardian_lite/README.md" target="_blank">🛡️ Guardian Lite</a><br>
-        Cyber defense starter shield. Scans files, monitors processes, and checks network safety.
-      </li>
-      <li>
-        <a href="../demos/ring_wolf/README.md" target="_blank">🥊 Ring Wolf</a><br>
-        Silent Army boxing demo. Turn-based fight system with stamina, rounds, and expansion hooks.
-      </li>
-    </ul>
-  </section>
-
-  <section id="support">
-    <h2>🐺 Support the Pack</h2>
-    <p>If these projects help you or your community, please consider supporting:</p>
-    <ul>
-      <li>💵 CashApp: <strong>$GrayWolfGroup</strong></li>
-      <li>🅿️ PayPal: <a href="https://paypal.me/graywolfgroup" target="_blank">paypal.me/graywolfgroup</a></li>
-      <li>₿ Bitcoin: <code>bc1q0ffv4example9d8yx3</code></li>
-    </ul>
-    <p>Every donation helps us build more <strong>Silent Army tools</strong> for the people.</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Gray Wolf Group LLC — Silent Army Rising</p>
-  </footer>
-</body>
-</html>
->>>>>>> 32b249d (🐺 Fixed image path – wolf logo now shows on homepage)

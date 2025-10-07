@@ -28,7 +28,8 @@ Focused on growing a personal **code forge** of tools and scripts that bridge se
 ---
 
 ## 📄 Résumé
-[📥 Download My Résumé (PDF)](Corey_Paris_Resume.pdf)
+[📥 Download My Résumé (PDF)](resume.pdf)
+
 
 ---
 
